@@ -1,4 +1,5 @@
-import "../styles.css";
+import "../static/resets.css";
+import "../static/styles.css";
 
 import App from "next/app";
 import Page from "../components/Page";

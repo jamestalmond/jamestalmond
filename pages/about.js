@@ -1,7 +1,11 @@
 import React from "react";
 
 function About() {
-  return <React.Fragment>About</React.Fragment>;
+  return (
+    <React.Fragment>
+      <div className="inner">About</div>
+    </React.Fragment>
+  );
 }
 
 export default About;
