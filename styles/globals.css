@@ -1,0 +1,175 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html,
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  color: #111111;
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizespeed;
+  font-size: 18px;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* @font-face {
+  font-family: 'Buenos Aires';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Buenos Aires Regular'),
+    url('/static/fonts/buenos-aires/buenosaires-regular.woff2') format('woff2'),
+    url('/static/fonts/buenos-aires/buenosaires-regular.woff') format('woff'),
+    url('/static/fonts/buenos-aires/buenosaires-regular.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Buenos Aires';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Buenos Aires Bold'),
+    url('/static/fonts/buenos-aires/buenosaires-bold.woff2') format('woff2'),
+    url('/static/fonts/buenos-aires/buenosaires-bold.woff') format('woff'),
+    url('/static/fonts/buenos-aires/buenosaires-bold.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Buenos Aires';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Buenos Aires SemiBold'),
+    url('/static/fonts/buenos-aires/buenosaires-semibold.woff2') format('woff2'),
+    url('/static/fonts/buenos-aires/buenosaires-semibold.woff') format('woff'),
+    url('/static/fonts/buenos-aires/buenosaires-semibold.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Buenos Aires';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Buenos Aires SemiBold Italic'),
+    url('/static/fonts/buenos-aires/buenosaires-semibolditalic.woff2')
+      format('woff2'),
+    url('/static/fonts/buenos-aires/buenosaires-semibolditalic.woff')
+      format('woff'),
+    url('/static/fonts/buenos-aires/buenosaires-semibolditalic.otf')
+      format('otf');
+}
+
+@font-face {
+  font-family: 'Buenos Aires';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Buenos Aires Bold Italic'),
+    url('/static/fonts/buenos-aires/buenosaires-bolditalic.woff2')
+      format('woff2'),
+    url('/static/fonts/buenos-aires/buenosaires-bolditalic.woff') format('woff'),
+    url('/static/fonts/buenos-aires/buenosaires-bolditalic.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Buenos Aires';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Buenos Aires Regular Italic'),
+    url('/static/fonts/buenos-aires/buenosaires-regularitalic.woff2')
+      format('woff2'),
+    url('/static/fonts/buenos-aires/buenosaires-regularitalic.woff')
+      format('woff'),
+    url('/static/fonts/buenos-aires/buenosaires-regularitalic.otf')
+      format('otf');
+} */
+
+* {
+  font-family: sans-serif;
+}
+
+#__next {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.app {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: stretch;
+  overflow-x: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
