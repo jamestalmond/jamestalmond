@@ -1,11 +1,11 @@
 :root {
-  --text-color: #111111;
+    --text-color: #111111;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body,
@@ -20,58 +20,58 @@ dl,
 dd,
 ul,
 ol {
-  margin: 0;
+    margin: 0;
 }
 
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
 }
 
 html,
 html:focus-within {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  color: var(--text-color);
-  min-height: 100vh;
-  line-height: 1.5;
-  text-rendering: optimizespeed;
-  font-size: 18px;
+    color: var(--text-color);
+    min-height: 100vh;
+    line-height: 1.5;
+    text-rendering: optimizespeed;
+    font-size: 18px;
 }
 
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
 }
 
 img,
 picture {
-  display: block;
-  max-width: 100%;
+    display: block;
+    max-width: 100%;
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html,
-  html:focus-within {
-    scroll-behavior: auto;
-  }
+    html,
+    html:focus-within {
+        scroll-behavior: auto;
+    }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-  }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 /* @font-face {
@@ -142,17 +142,20 @@ select {
 } */
 
 * {
-  font-family: sans-serif;
+    font-family: sans-serif;
 }
 
 main {
-  flex-grow: 1;
+    flex-grow: 1;
+    padding: 4rem 2rem;
+    max-width: 100ch;
+    margin: auto;
 }
 
 #__next {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 /* .app {
@@ -164,11 +167,11 @@ main {
 } */
 
 .visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
 }
