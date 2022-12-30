@@ -158,6 +158,10 @@ main {
     flex-direction: column;
 }
 
+#kitchen-sink hr {
+    margin: 2rem 0;
+}
+
 /* .app {
   display: flex;
   flex: 1;
