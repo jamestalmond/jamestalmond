@@ -1,4 +1,4 @@
 # TODO
 
--   [ ] 404 page
--   [ ] Kitchen sink
+- [ ] 404 page
+- [x] Kitchen sink

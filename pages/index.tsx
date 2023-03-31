@@ -1,11 +1,11 @@
 import React from "react"
 
 const Index = () => {
-    return (
-        <>
-            <div>This is the homepage!</div>
-        </>
-    )
+	return (
+		<>
+			<h1>This is the homepage!</h1>
+		</>
+	)
 }
 
 export default Index
