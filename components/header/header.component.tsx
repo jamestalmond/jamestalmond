@@ -17,7 +17,7 @@ export const Header = () => {
 						<a href="/kitchen-sink">Kitchen Sink</a>
 					</li>
 					<li>
-						<a href="/fetch-test">API test</a>
+						<a href="/premier-league-table">API test</a>
 					</li>
 					<li>
 						<a href="#">Link</a>

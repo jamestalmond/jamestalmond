@@ -74,73 +74,6 @@ select {
 	}
 }
 
-/* @font-face {
-  font-family: 'Buenos Aires';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Buenos Aires Regular'),
-    url('/static/fonts/buenos-aires/buenosaires-regular.woff2') format('woff2'),
-    url('/static/fonts/buenos-aires/buenosaires-regular.woff') format('woff'),
-    url('/static/fonts/buenos-aires/buenosaires-regular.otf') format('otf');
-}
-
-@font-face {
-  font-family: 'Buenos Aires';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Buenos Aires Bold'),
-    url('/static/fonts/buenos-aires/buenosaires-bold.woff2') format('woff2'),
-    url('/static/fonts/buenos-aires/buenosaires-bold.woff') format('woff'),
-    url('/static/fonts/buenos-aires/buenosaires-bold.otf') format('otf');
-}
-
-@font-face {
-  font-family: 'Buenos Aires';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Buenos Aires SemiBold'),
-    url('/static/fonts/buenos-aires/buenosaires-semibold.woff2') format('woff2'),
-    url('/static/fonts/buenos-aires/buenosaires-semibold.woff') format('woff'),
-    url('/static/fonts/buenos-aires/buenosaires-semibold.otf') format('otf');
-}
-
-@font-face {
-  font-family: 'Buenos Aires';
-  font-style: italic;
-  font-weight: 600;
-  src: local('Buenos Aires SemiBold Italic'),
-    url('/static/fonts/buenos-aires/buenosaires-semibolditalic.woff2')
-      format('woff2'),
-    url('/static/fonts/buenos-aires/buenosaires-semibolditalic.woff')
-      format('woff'),
-    url('/static/fonts/buenos-aires/buenosaires-semibolditalic.otf')
-      format('otf');
-}
-
-@font-face {
-  font-family: 'Buenos Aires';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Buenos Aires Bold Italic'),
-    url('/static/fonts/buenos-aires/buenosaires-bolditalic.woff2')
-      format('woff2'),
-    url('/static/fonts/buenos-aires/buenosaires-bolditalic.woff') format('woff'),
-    url('/static/fonts/buenos-aires/buenosaires-bolditalic.otf') format('otf');
-}
-
-@font-face {
-  font-family: 'Buenos Aires';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Buenos Aires Regular Italic'),
-    url('/static/fonts/buenos-aires/buenosaires-regularitalic.woff2')
-      format('woff2'),
-    url('/static/fonts/buenos-aires/buenosaires-regularitalic.woff')
-      format('woff'),
-    url('/static/fonts/buenos-aires/buenosaires-regularitalic.otf')
-      format('otf');
-} */
-
 * {
 	font-family: sans-serif;
 }
@@ -148,8 +81,6 @@ select {
 main {
 	flex-grow: 1;
 	padding: 4rem 2rem;
-	max-width: 100ch;
-	margin: auto;
 }
 
 #__next {
@@ -161,14 +92,6 @@ main {
 #kitchen-sink hr {
 	margin: 2rem 0;
 }
-
-/* .app {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: stretch;
-  overflow-x: hidden;
-} */
 
 .visually-hidden {
 	position: absolute;
