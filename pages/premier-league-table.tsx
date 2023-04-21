@@ -4,8 +4,19 @@ import { API_URL, API_TOKEN } from "../api"
 
 import styles from "../styles/premier-league-table.module.scss"
 
+interface PremierLeagueData {
+	competition: {
+		name: string
+	}
+	standings: [
+		{
+			table
+		}
+	]
+}
+
 const PremierLeagueTable = () => {
-	const [data, setData] = useState([])
+	const [data, setData] = useState<PremierLeagueData>({} as PremierLeagueData)
 
 	const fetchData = () => {
 		return fetch(API_URL, {
@@ -34,7 +45,7 @@ const PremierLeagueTable = () => {
 			<h1>{data?.competition?.name} table</h1>
 
 			{/* TODO: styles not working? */}
-			<table className={styles.premierLeagueTable}>
+			<table className={styles["premier-league-table"]}>
 				<thead>
 					<tr>
 						<th scope="col">Team</th>
@@ -44,18 +55,20 @@ const PremierLeagueTable = () => {
 						<th scope="col">Lost</th>
 					</tr>
 				</thead>
-				{data?.standings &&
-					data.standings[0].table.map((position) => {
-						return (
-							<tr>
-								<td key={`${position.team.shortName}-${position.team.id}`}>{position.team.shortName}</td>
-								<td key={`${position.points}-${position.team.id}`}>{position.points}</td>
-								<td key={`${position.won}-${position.team.id}`}>{position.won}</td>
-								<td key={`${position.draw}-${position.team.id}`}>{position.draw}</td>
-								<td key={`${position.lost}-${position.team.id}`}>{position.lost}</td>
-							</tr>
-						)
-					})}
+				<tbody>
+					{data?.standings &&
+						data.standings[0].table.map((position, index) => {
+							return (
+								<tr key={`${position.team.id}`}>
+									<td key={`${position.team.shortName}`}>{position.team.shortName}</td>
+									<td key={`${position.team.shortName}-${position.points}-points`}>{position.points}</td>
+									<td key={`${position.team.shortName}-${position.won}-won`}>{position.won}</td>
+									<td key={`${position.team.shortName}-${position.draw}-draw`}>{position.draw}</td>
+									<td key={`${position.team.shortName}-${position.lost}-lost`}>{position.lost}</td>
+								</tr>
+							)
+						})}
+				</tbody>
 			</table>
 		</>
 	)
