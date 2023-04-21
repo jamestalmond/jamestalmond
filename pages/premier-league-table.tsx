@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 
-import { API_URL, API_TOKEN } from "../api"
+import { fetchData } from "../services/api"
 
 import styles from "../styles/premier-league-table.module.scss"
 
@@ -18,23 +18,8 @@ interface PremierLeagueData {
 const PremierLeagueTable = () => {
 	const [data, setData] = useState<PremierLeagueData>({} as PremierLeagueData)
 
-	const fetchData = () => {
-		return fetch(API_URL, {
-			headers: {
-				"X-AUTH-TOKEN": API_TOKEN,
-			},
-		})
-			.then((response) => response.json())
-			.then((data) => {
-				setData(data)
-			})
-			.catch((error) => {
-				console.log(error.message)
-			})
-	}
-
 	useEffect(() => {
-		fetchData()
+		fetchData(setData)
 	}, [])
 
 	console.clear()
