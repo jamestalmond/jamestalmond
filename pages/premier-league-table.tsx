@@ -62,12 +62,11 @@ const PremierLeagueTable = () => {
 										<td key={`${position.team.id}-${position.form}-form`}>
 											<div className={styles["game-result"]}>
 												{gameForm.map((gameResult, index) => {
-													const gameResultPillClassName = `game-result-pill-${gameResult}`
-													console.log(gameResultPillClassName)
+													const gameResultPillClassName = `game-result-pill-${gameResult}`.toLowerCase()
 
 													return (
 														<div
-															className={cx(styles["game-result-pill"], styles[`${gameResultPillClassName}`])}
+															className={cx(styles["game-result-pill"], styles[gameResultPillClassName])}
 															key={`${gameResult}-${index}`}
 														>
 															{gameResult}
