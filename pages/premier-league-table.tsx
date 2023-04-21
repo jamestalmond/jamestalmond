@@ -29,7 +29,6 @@ const PremierLeagueTable = () => {
 		<>
 			<h1>{data?.competition?.name} table</h1>
 
-			{/* TODO: styles not working? */}
 			<table className={styles["premier-league-table"]}>
 				<thead>
 					<tr>
