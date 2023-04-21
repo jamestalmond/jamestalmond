@@ -1,4 +1,5 @@
 .premier-league-table-wrapper {
+	margin: -0.5rem;
 	overflow-x: auto;
 }
 
@@ -8,7 +9,38 @@
 
 	th,
 	td {
-		padding-top: 0.5rem;
-		padding-bottom: 0.5rem;
+		padding: 0.5rem;
 	}
+}
+
+.game-result {
+	display: flex;
+	gap: 0.25rem;
+}
+
+.game-result-pill {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 2rem;
+	height: 2rem;
+	border-radius: 100%;
+
+	font-size: 1rem;
+	line-height: 1;
+	text-align: center;
+	color: white;
+}
+
+.game-result-pill-w {
+	background-color: green;
+}
+
+.game-result-pill-d {
+	background-color: grey;
+}
+
+.game-result-pill-l {
+	background-color: red;
 }
