@@ -1,4 +1,14 @@
+.premier-league-table-wrapper {
+	overflow-x: auto;
+}
+
 .premier-league-table {
 	width: 100%;
 	text-align: left;
+
+	th,
+	td {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
 }

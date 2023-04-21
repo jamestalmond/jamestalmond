@@ -29,31 +29,41 @@ const PremierLeagueTable = () => {
 		<>
 			<h1>{data?.competition?.name} table</h1>
 
-			<table className={styles["premier-league-table"]}>
-				<thead>
-					<tr>
-						<th scope="col">Team</th>
-						<th scope="col">Points</th>
-						<th scope="col">Won</th>
-						<th scope="col">Drawn</th>
-						<th scope="col">Lost</th>
-					</tr>
-				</thead>
-				<tbody>
-					{data?.standings &&
-						data.standings[0].table.map((position, index) => {
-							return (
-								<tr key={`${position.team.id}`}>
-									<td key={`${position.team.shortName}`}>{position.team.shortName}</td>
-									<td key={`${position.team.shortName}-${position.points}-points`}>{position.points}</td>
-									<td key={`${position.team.shortName}-${position.won}-won`}>{position.won}</td>
-									<td key={`${position.team.shortName}-${position.draw}-draw`}>{position.draw}</td>
-									<td key={`${position.team.shortName}-${position.lost}-lost`}>{position.lost}</td>
-								</tr>
-							)
-						})}
-				</tbody>
-			</table>
+			<section className={styles["premier-league-table-wrapper"]}>
+				<table className={styles["premier-league-table"]}>
+					<thead>
+						<tr>
+							<th scope="col">Position</th>
+							<th scope="col">Team</th>
+							<th scope="col">Played</th>
+							<th scope="col">Points</th>
+							<th scope="col">Won</th>
+							<th scope="col">Drawn</th>
+							<th scope="col">Lost</th>
+						</tr>
+					</thead>
+					<tbody>
+						{data?.standings &&
+							data.standings[0].table.map((position, index) => {
+								const tablePosition = index + 1
+
+								return (
+									<tr key={`${position.team.id}`}>
+										<td key={`${position.team.shortName}-${index}`}>{tablePosition}</td>
+										<td key={`${position.team.shortName}`}>{position.team.shortName}</td>
+										<td key={`${position.team.shortName}-${position.playedGames}-playedGames`}>
+											{position.playedGames}
+										</td>
+										<td key={`${position.team.shortName}-${position.points}-points`}>{position.points}</td>
+										<td key={`${position.team.shortName}-${position.won}-won`}>{position.won}</td>
+										<td key={`${position.team.shortName}-${position.draw}-draw`}>{position.draw}</td>
+										<td key={`${position.team.shortName}-${position.lost}-lost`}>{position.lost}</td>
+									</tr>
+								)
+							})}
+					</tbody>
+				</table>
+			</section>
 		</>
 	)
 }

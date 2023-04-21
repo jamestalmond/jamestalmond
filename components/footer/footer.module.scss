@@ -1,8 +1,7 @@
 .footer {
+	padding: 2rem;
 	background-color: var(--text-color);
-}
 
-.footer {
 	> * {
 		color: var(--text-color);
 		filter: invert(100%);
