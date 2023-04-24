@@ -1,5 +1,26 @@
+//
+// setup
+//
+
+$breakpoint: 600px;
+
 :root {
+	--gutter-padding: 1rem;
 	--text-color: #111111;
+}
+
+@media (min-width: $breakpoint) {
+	:root {
+		--gutter-padding: 2rem;
+	}
+}
+
+//
+// elements
+//
+
+* {
+	font-family: sans-serif;
 }
 
 *,
@@ -58,37 +79,14 @@ select {
 	font: inherit;
 }
 
-@media (prefers-reduced-motion: reduce) {
-	html,
-	html:focus-within {
-		scroll-behavior: auto;
-	}
-
-	*,
-	*::before,
-	*::after {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		scroll-behavior: auto !important;
-		transition-duration: 0.01ms !important;
-	}
-}
-
-* {
-	font-family: sans-serif;
-}
-
 main {
 	flex-grow: 1;
-	padding: 2rem;
+	padding: var(--gutter-padding);
 }
 
-@media (min-width: 600px) {
-	main {
-		padding-top: 4rem;
-		padding-bottom: 4rem;
-	}
-}
+//
+// selectors
+//
 
 #__next {
 	display: flex;
@@ -108,4 +106,30 @@ main {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
 	white-space: nowrap;
+}
+
+//
+// media queries
+//
+
+@media (min-width: $breakpoint) {
+	main {
+		padding-block: 4rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html,
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
 }

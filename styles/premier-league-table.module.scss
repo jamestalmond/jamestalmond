@@ -1,15 +1,25 @@
 .premier-league-table-wrapper {
-	margin: -0.5rem;
+	margin-block-start: 2rem;
 	overflow-x: auto;
 }
 
 .premier-league-table {
 	width: 100%;
+	padding-inline: 0.5rem;
+	padding-block: 1rem;
+	border-spacing: 0;
+	background-color: rgba(black, 0.05);
 	text-align: left;
 
 	th,
 	td {
-		padding: 0.5rem;
+		padding-inline: 1rem;
+		padding-block: 0.5rem;
+		border-inline-end: 1px solid white;
+
+		&:last-child {
+			border-inline-end: none;
+		}
 	}
 }
 
