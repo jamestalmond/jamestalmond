@@ -47,13 +47,19 @@ export const PremierLeagueTable = () => {
 					<tbody>
 						{data?.standings &&
 							data.standings[0].table.map((position, index) => {
-								const tablePosition = index + 1
+								const tablePosition = position.position
+								const teamName = position.team.name.replace(" FC", "")
 								const gameForm = position.form.split(",").reverse()
 
 								return (
 									<tr key={`${position.team.id}`}>
 										<td key={`${position.team.id}-${index}`}>{tablePosition}</td>
-										<td key={`${position.team.id}`}>{position.team.shortName}</td>
+										<td key={`${position.team.id}`}>
+											<div className={styles["team"]}>
+												<img src={position.team.crest} alt={`${teamName} crest.`} className={styles["team-crest"]} />
+												{teamName}
+											</div>
+										</td>
 										<td key={`${position.team.id}-${position.playedGames}-playedGames`}>{position.playedGames}</td>
 										<td key={`${position.team.id}-${position.points}-points`}>{position.points}</td>
 										<td key={`${position.team.id}-${position.won}-won`}>{position.won}</td>

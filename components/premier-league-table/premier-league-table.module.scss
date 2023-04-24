@@ -15,12 +15,21 @@
 	td {
 		padding-inline: 1rem;
 		padding-block: 0.5rem;
-		border-inline-end: 1px solid white;
 
 		&:last-child {
 			border-inline-end: none;
 		}
 	}
+}
+
+.team {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.team-crest {
+	height: 2rem;
 }
 
 .game-result {
