@@ -1,3 +1,5 @@
+@import "utilities/variables";
+
 .premier-league-table-wrapper {
 	margin-block-start: 2rem;
 	overflow-x: auto;
@@ -29,8 +31,13 @@
 }
 
 .team-crest {
+	display: none;
 	max-height: 2rem;
 	width: 32px;
+
+	@media (min-width: $largeBreakpoint) {
+		display: inline;
+	}
 }
 
 .game-result {

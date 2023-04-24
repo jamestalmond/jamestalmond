@@ -2,14 +2,14 @@
 // setup
 //
 
-$breakpoint: 600px;
+@import "utilities/variables";
 
 :root {
 	--gutter-padding: 1rem;
 	--text-color: #111111;
 }
 
-@media (min-width: $breakpoint) {
+@media (min-width: $mediumBreakpoint) {
 	:root {
 		--gutter-padding: 2rem;
 	}
@@ -112,7 +112,7 @@ main {
 // media queries
 //
 
-@media (min-width: $breakpoint) {
+@media (min-width: $mediumBreakpoint) {
 	main {
 		padding-block: 4rem;
 	}
