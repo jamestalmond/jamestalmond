@@ -1,7 +1,7 @@
 import "../styles/globals.scss"
 
-import { Header } from "../components/header/header.component"
-import { Footer } from "../components/footer/footer.component"
+import { Header } from "../components/header"
+import { Footer } from "../components/footer"
 
 import { useRouter } from "next/router"
 
