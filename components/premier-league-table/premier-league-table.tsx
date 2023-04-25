@@ -5,6 +5,7 @@ import cx from "classnames"
 import { fetchData } from "../../services/api"
 
 import styles from "./premier-league-table.module.scss"
+import utilityStyles from "../../utilities/utilities.module.scss"
 
 interface PremierLeagueData {
 	competition
@@ -29,9 +30,13 @@ export const PremierLeagueTable = () => {
 
 	return (
 		<>
-			<h1>
-				<img src={data.competition?.emblem} alt={`${data.competition?.name} crest.`} />
-				{data.competition?.name}
+			<h1 className={styles["premier-league-heading"]}>
+				<img
+					src="/static/images/premier-league-logo.webp"
+					alt={`${data.competition?.name} crest.`}
+					className={styles["premier-league-logo"]}
+				/>
+				<span className={utilityStyles["visually-hidden"]}>{data.competition?.name} table</span>
 			</h1>
 
 			<section className={styles["premier-league-table-wrapper"]}>
