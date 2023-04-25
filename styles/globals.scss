@@ -5,12 +5,10 @@
 @import "utilities/variables";
 
 :root {
-	--gutter-padding: 1rem;
+	--gutter-padding: 0.5rem;
 	--text-color: #111111;
-}
 
-@media (min-width: $mediumBreakpoint) {
-	:root {
+	@media (min-width: $mediumBreakpoint) {
 		--gutter-padding: 2rem;
 	}
 }
@@ -81,7 +79,7 @@ select {
 
 main {
 	flex-grow: 1;
-	padding: var(--gutter-padding);
+	padding: calc(var(--gutter-padding) * 2) var(--gutter-padding);
 }
 
 //
@@ -111,12 +109,6 @@ main {
 //
 // media queries
 //
-
-@media (min-width: $mediumBreakpoint) {
-	main {
-		padding-block: 4rem;
-	}
-}
 
 @media (prefers-reduced-motion: reduce) {
 	html,

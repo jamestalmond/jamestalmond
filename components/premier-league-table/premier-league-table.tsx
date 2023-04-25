@@ -30,8 +30,8 @@ export const PremierLeagueTable = () => {
 	return (
 		<>
 			<h1>
-				{data.competition?.name}
 				<img src={data.competition?.emblem} alt={`${data.competition?.name} crest.`} />
+				{data.competition?.name}
 			</h1>
 
 			<section className={styles["premier-league-table-wrapper"]}>

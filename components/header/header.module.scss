@@ -1,5 +1,11 @@
+@import "utilities/variables";
+
 .header {
-	padding: 1rem var(--gutter-padding);
+	padding: calc(var(--gutter-padding) * 2) var(--gutter-padding);
+
+	@media (min-width: $mediumBreakpoint) {
+		padding-block: calc(var(--gutter-padding) / 2);
+	}
 
 	nav {
 		overflow-x: auto;

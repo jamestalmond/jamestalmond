@@ -1,6 +1,12 @@
+@import "utilities/variables";
+
 .footer {
-	padding: var(--gutter-padding);
+	padding: calc(var(--gutter-padding) * 2) var(--gutter-padding);
 	background-color: var(--text-color);
+
+	@media (min-width: $mediumBreakpoint) {
+		padding-block: calc(var(--gutter-padding) / 2);
+	}
 
 	> * {
 		color: var(--text-color);
