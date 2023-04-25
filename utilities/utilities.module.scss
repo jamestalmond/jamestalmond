@@ -1,3 +1,5 @@
+@import "utilities/variables";
+
 .visually-hidden {
 	position: absolute;
 	overflow: hidden;
@@ -6,4 +8,20 @@
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
 	white-space: nowrap;
+}
+
+.show-below-medium {
+	display: inline;
+
+	@media (min-width: $mediumBreakpoint) {
+		display: none;
+	}
+}
+
+.show-above-medium {
+	display: none;
+
+	@media (min-width: $mediumBreakpoint) {
+		display: inline;
+	}
 }

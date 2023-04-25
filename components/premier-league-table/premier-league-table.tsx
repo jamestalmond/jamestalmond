@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { useMediaQuery } from "react-responsive"
 import cx from "classnames"
 
 import { fetchData } from "../../services/api"
@@ -13,49 +12,60 @@ interface PremierLeagueData {
 }
 
 export const PremierLeagueTable = () => {
-	const [data, setData] = useState<PremierLeagueData>({} as PremierLeagueData)
-
-	const isMediumOrAbove = useMediaQuery({
-		query: "(min-width: 600px)",
-	})
-	const isLargeOrAbove = useMediaQuery({
-		query: "(min-width: 1100px)",
-	})
+	const [tableData, setTableData] = useState<PremierLeagueData>({} as PremierLeagueData)
 
 	useEffect(() => {
-		fetchData(setData)
+		fetchData(setTableData)
 	}, [])
 
-	console.log(data)
+	console.log(tableData)
 
 	return (
 		<>
 			<h1 className={styles["premier-league-heading"]}>
 				<img
 					src="/static/images/premier-league-logo.webp"
-					alt={`${data.competition?.name} crest.`}
+					alt={`${tableData.competition?.name} crest.`}
 					className={styles["premier-league-logo"]}
 				/>
-				<span className={utilityStyles["visually-hidden"]}>{data.competition?.name} table</span>
+				<span className={utilityStyles["visually-hidden"]}>{tableData.competition?.name} table</span>
 			</h1>
 
 			<section className={styles["premier-league-table-wrapper"]}>
 				<table className={styles["premier-league-table"]}>
 					<thead>
 						<tr>
-							<th scope="col">{isMediumOrAbove ? "Position" : "Pos"}</th>
+							<th scope="col">
+								<span className={utilityStyles["show-below-medium"]}>Pos</span>
+								<span className={utilityStyles["show-above-medium"]}>Position</span>
+							</th>
 							<th scope="col">Club</th>
-							<th scope="col">{isMediumOrAbove ? "Played" : "Pld"}</th>
-							<th scope="col">{isMediumOrAbove ? "Won" : "W"}</th>
-							<th scope="col">{isMediumOrAbove ? "Drawn" : "D"}</th>
-							<th scope="col">{isMediumOrAbove ? "Lost" : "L"}</th>
-							<th scope="col">{isMediumOrAbove ? "Points" : "Pts"}</th>
+							<th scope="col">
+								<span className={utilityStyles["show-below-medium"]}>Pld</span>
+								<span className={utilityStyles["show-above-medium"]}>Played</span>
+							</th>
+							<th scope="col">
+								<span className={utilityStyles["show-below-medium"]}>W</span>
+								<span className={utilityStyles["show-above-medium"]}>Won</span>
+							</th>
+							<th scope="col">
+								<span className={utilityStyles["show-below-medium"]}>D</span>
+								<span className={utilityStyles["show-above-medium"]}>Drawn</span>
+							</th>
+							<th scope="col">
+								<span className={utilityStyles["show-below-medium"]}>L</span>
+								<span className={utilityStyles["show-above-medium"]}>Lost</span>
+							</th>
+							<th scope="col">
+								<span className={utilityStyles["show-below-medium"]}>Pts</span>
+								<span className={utilityStyles["show-above-medium"]}>Points</span>
+							</th>
 							<th scope="col">Form</th>
 						</tr>
 					</thead>
 					<tbody>
-						{data.standings &&
-							data.standings[0].table.map((position, index) => {
+						{tableData.standings &&
+							tableData.standings[0].table.map((position, index) => {
 								const tablePosition = position.position
 								const teamName = position.team.name.replace(" FC", "")
 								const gameForm = position.form.split(",").reverse()
@@ -66,7 +76,9 @@ export const PremierLeagueTable = () => {
 										<td key={`${position.team.id}`}>
 											<div className={styles["team"]}>
 												<img src={position.team.crest} alt={`${teamName} crest.`} className={styles["team-crest"]} />
-												{isLargeOrAbove ? teamName : position.team.tla}
+
+												<span className={utilityStyles["show-below-medium"]}>{position.team.tla}</span>
+												<span className={utilityStyles["show-above-medium"]}>{teamName}</span>
 											</div>
 										</td>
 										<td key={`${position.team.id}-${position.playedGames}-playedGames`}>{position.playedGames}</td>
