@@ -12,4 +12,15 @@
 		color: var(--text-color);
 		filter: invert(100%);
 	}
+
+	nav {
+		overflow-x: auto;
+
+		ul {
+			display: flex;
+			gap: 1rem;
+			list-style: none;
+			padding-left: 0;
+		}
+	}
 }

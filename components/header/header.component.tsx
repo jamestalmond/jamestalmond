@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import styles from "./header.module.scss"
 
 export const Header = () => {
@@ -6,25 +8,25 @@ export const Header = () => {
 			<nav>
 				<ul>
 					<li>
-						<a href="/">Home</a>
+						<Link href="/">Home</Link>
 					</li>
 					<li>
-						<a href="/about">About</a>
+						<Link href="/about">About Me</Link>
 					</li>
 					<li>
-						<a href="/kitchen-sink">Kitchen Sink</a>
+						<Link href="#">Skills & Experience</Link>
 					</li>
 					<li>
-						<a href="/premier-league-table">API test</a>
+						<Link href="#">Career history</Link>
 					</li>
 					<li>
-						<a href="#">Link</a>
+						<Link href="#">Contact me</Link>
 					</li>
 					<li>
-						<a href="#">Another link</a>
+						<Link href="/premier-league-table">Premier League Table</Link>
 					</li>
 					<li>
-						<a href="#">Linky McLink Link</a>
+						<Link href="/kitchen-sink">Kitchen Sink</Link>
 					</li>
 				</ul>
 			</nav>
