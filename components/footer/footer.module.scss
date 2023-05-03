@@ -4,9 +4,12 @@
 	padding: var(--gutter-padding);
 	background-color: var(--text-color);
 
-	> * {
-		color: var(--text-color);
-		filter: invert(100%);
+	a {
+		color: white;
+
+		&:hover {
+			text-decoration: none;
+		}
 	}
 
 	nav {
