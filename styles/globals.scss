@@ -14,7 +14,7 @@
 
 	--text-color: #111;
 
-	--gutter-padding: 0.5rem;
+	--gutter-padding: 1rem;
 
 	@media (min-width: $mediumBreakpoint) {
 		--gutter-padding: 2rem;
@@ -95,7 +95,7 @@ select {
 
 main {
 	flex-grow: 1;
-	padding: calc(var(--gutter-padding) * 2) var(--gutter-padding);
+	padding: var(--gutter-padding);
 }
 
 //
