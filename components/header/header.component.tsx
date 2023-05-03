@@ -17,10 +17,10 @@ export const Header = () => {
 						<Link href="/skills-and-experience">Skills & Experience</Link>
 					</li>
 					<li>
-						<Link href="#">Career history</Link>
+						<Link href="/career-history">Career History</Link>
 					</li>
 					<li>
-						<Link href="#">Contact me</Link>
+						<Link href="#">Contact Me</Link>
 					</li>
 					<li>
 						<Link href="/premier-league-table">Premier League Table</Link>
