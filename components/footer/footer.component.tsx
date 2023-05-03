@@ -13,6 +13,9 @@ export const Footer = () => {
 					<li>
 						<Link href="https://twitter.com/VivaLaJam">Twitter</Link>
 					</li>
+					<li>
+						<Link href="https://github.com/jamestalmond/jamestalmond">Source code for this site</Link>
+					</li>
 				</ul>
 			</nav>
 		</footer>
