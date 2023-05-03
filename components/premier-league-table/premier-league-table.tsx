@@ -18,7 +18,7 @@ export const PremierLeagueTable = () => {
 		fetchData(setTableData)
 	}, [])
 
-	console.log(tableData)
+	// console.log(tableData)
 
 	return (
 		<>
