@@ -50,6 +50,10 @@ ol {
 	margin: 0;
 }
 
+ul {
+	margin-block: 1rem;
+}
+
 ul[role="list"],
 ol[role="list"] {
 	list-style: none;
@@ -70,6 +74,10 @@ body {
 
 a:not([class]) {
 	text-decoration-skip-ink: auto;
+}
+
+p {
+	margin-block: 1rem;
 }
 
 img,
