@@ -1,3 +1,7 @@
+import cx from "classnames"
+
+import styles from "../styles/kitchen-sink.module.scss"
+
 const KitchenSink = () => {
 	return (
 		<>
@@ -14,6 +18,19 @@ const KitchenSink = () => {
 					<h5>h5 Expect skilled signwriters to use many jazzy, quaint old alphabets effectively.</h5>
 					<h6>h6 Pack my box with five dozen liquor jugs.</h6>
 				</hgroup>
+			</section>
+
+			<section>
+				<h2>Colour palette</h2>
+
+				<div className={styles["colour-palette-container"]}>
+					<div className={cx(styles["colour-palette"], styles["alpha"])}></div>
+					<div className={cx(styles["colour-palette"], styles["bravo"])}></div>
+					<div className={cx(styles["colour-palette"], styles["charlie"])}></div>
+					<div className={cx(styles["colour-palette"], styles["delta"])}></div>
+					<div className={cx(styles["colour-palette"], styles["echo"])}></div>
+					<div className={cx(styles["colour-palette"], styles["foxtrot"])}></div>
+				</div>
 			</section>
 
 			<hr />

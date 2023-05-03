@@ -5,8 +5,16 @@
 @import "utilities/variables";
 
 :root {
+	--blue-100: #206cc2;
+	--blue-200: #0094db;
+	--blue-300: #00b7d1;
+	--green-100: #00d5ae;
+	--green-200: #8beb85;
+	--yellow-100: #f9f871;
+
+	--text-color: #111;
+
 	--gutter-padding: 0.5rem;
-	--text-color: #111111;
 
 	@media (min-width: $mediumBreakpoint) {
 		--gutter-padding: 2rem;
