@@ -68,7 +68,7 @@ export const PremierLeagueTable = () => {
 							tableData.standings[0].table.map((position, index) => {
 								const tablePosition = position.position
 								const teamName = position.team.name.replace(" FC", "")
-								const gameForm = position.form.split(",").reverse()
+								const gameForm = position.form?.split(",").reverse()
 
 								return (
 									<tr key={`${position.team.id}`}>
@@ -88,18 +88,22 @@ export const PremierLeagueTable = () => {
 										<td key={`${position.team.id}-${position.points}-points`}>{position.points}</td>
 										<td key={`${position.team.id}-${position.form}-form`}>
 											<div className={styles["game-result"]}>
-												{gameForm.map((gameResult, index) => {
-													const gameResultPillClassName = `game-result-pill-${gameResult}`.toLowerCase()
+												{gameForm ? (
+													gameForm.map((gameResult, index) => {
+														const gameResultPillClassName = `game-result-pill-${gameResult}`.toLowerCase()
 
-													return (
-														<div
-															className={cx(styles["game-result-pill"], styles[gameResultPillClassName])}
-															key={`${gameResult}-${index}`}
-														>
-															{gameResult}
-														</div>
-													)
-												})}
+														return (
+															<div
+																className={cx(styles["game-result-pill"], styles[gameResultPillClassName])}
+																key={`${gameResult}-${index}`}
+															>
+																{gameResult}
+															</div>
+														)
+													})
+												) : (
+													<div>0</div>
+												)}
 											</div>
 										</td>
 									</tr>
