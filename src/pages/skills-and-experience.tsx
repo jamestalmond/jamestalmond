@@ -19,7 +19,7 @@ const skillsAndExperienceListItems = [
 	"Mentoring",
 ]
 
-export const SkillsAndExperience = () => {
+const SkillsAndExperience = () => {
 	return (
 		<>
 			<h1>Skills &amp; Experience</h1>
