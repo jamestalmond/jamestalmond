@@ -1,1 +1,1 @@
-export { PremierLeagueTable } from './premier-league-table'
+export { PremierLeagueTable } from './premier-league-table.component'
