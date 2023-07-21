@@ -1,0 +1,33 @@
+@import "src/utilities/variables";
+
+.remove-padding {
+	margin: calc(var(--gutter-padding) * -1);
+}
+
+.add-padding {
+	padding: var(--gutter-padding);
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	height: 100vh;
+	padding: var(--gutter-padding);
+	background-color: var(--blue-100);
+
+	text-align: center;
+	color: white;
+}
+
+.hero-title {
+	font-size: 2rem;
+}
+
+.hero-subtitle {
+	margin-block-end: 0;
+
+	font-size: 1rem;
+}

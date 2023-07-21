@@ -11,15 +11,17 @@ export default function App({ Component, pageProps }: AppProps) {
 	const router = useRouter()
 	const pageId = router.pathname.substring(1)
 
+	const showHeaderAndFooter = router.pathname !== "/test-homepage"
+
 	return (
 		<>
-			<Header />
+			{showHeaderAndFooter && <Header />}
 
 			<main id={pageId}>
 				<Component {...pageProps} />
 			</main>
 
-			<Footer />
+			{showHeaderAndFooter && <Footer />}
 		</>
 	)
 }
