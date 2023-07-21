@@ -23,11 +23,29 @@
 }
 
 .hero-title {
-	font-size: 2rem;
+	--hero-title-size: 1.5rem;
+
+	font-size: var(--hero-title-size);
+
+	@media (min-width: $mediumBreakpoint) {
+		font-size: calc(var(--hero-title-size) * 2);
+	}
+
+	@media (min-width: $largeBreakpoint) {
+		font-size: calc(var(--hero-title-size) * 2.5);
+	}
 }
 
 .hero-subtitle {
-	margin-block-end: 0;
+	--hero-subtitle-size: 1rem;
 
-	font-size: 1rem;
+	font-size: var(--hero-subtitle-size);
+
+	@media (min-width: $mediumBreakpoint) {
+		font-size: calc(var(--hero-subtitle-size) * 2);
+	}
+
+	@media (min-width: $largeBreakpoint) {
+		font-size: calc(var(--hero-subtitle-size) * 2.5);
+	}
 }
