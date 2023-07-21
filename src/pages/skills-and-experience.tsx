@@ -1,3 +1,24 @@
+const skillsAndExperienceListItems = [
+	"Semantic, accessible HTML",
+	"CSS, SCSS, CSS in JS",
+	"JavaScript ES6 and beyond",
+	"React",
+	"TypeScript",
+	"TDD & Jest",
+	"React Testing Library",
+	"Webpack",
+	"Next.js",
+	"Design Systems",
+	"GraphQL",
+	"Git & Versioning",
+	"Cross-browser & device testing",
+	"Accessibility",
+	"A/B testing",
+	"Pair programming and mobbing",
+	"Agile methodologies",
+	"Mentoring",
+]
+
 export const SkillsAndExperience = () => {
 	return (
 		<>
@@ -9,24 +30,9 @@ export const SkillsAndExperience = () => {
 			</p>
 
 			<ul>
-				<li>Semantic, accessible HTML</li>
-				<li>CSS, SCSS, CSS in JS</li>
-				<li>JavaScript ES6 and beyond</li>
-				<li>React</li>
-				<li>TypeScript</li>
-				<li>TDD & Jest</li>
-				<li>React Testing Library</li>
-				<li>Webpack</li>
-				<li>Next.js</li>
-				<li>GraphQL</li>
-				<li>Git</li>
-				<li>Cross-browser & device testing</li>
-				<li>Accessibility</li>
-				<li>A/B testing</li>
-				<li>Pair programming and mobbing</li>
-				<li>Agile methodologies</li>
-				<li>Mentoring</li>
-				<li>Jira</li>
+				{skillsAndExperienceListItems.map((item) => (
+					<li>{item}</li>
+				))}
 			</ul>
 		</>
 	)
