@@ -30,8 +30,8 @@ export const SkillsAndExperience = () => {
 			</p>
 
 			<ul>
-				{skillsAndExperienceListItems.map((item) => (
-					<li>{item}</li>
+				{skillsAndExperienceListItems.map((item, index) => (
+					<li key={index}>{item}</li>
 				))}
 			</ul>
 		</>
